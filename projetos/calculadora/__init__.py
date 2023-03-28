@@ -15,6 +15,6 @@ def calcule():
     opcao = input(f"Selecione a operaço: {[opcao for opcao in menuFuncoes.keys()]}: ")
     
     if opcao in menuFuncoes:
-      print(menuFuncoes[opcao](a,b))
+      print("Resultado: ", menuFuncoes[opcao](a,b))
     else:
       print("Seleção Inválida")
