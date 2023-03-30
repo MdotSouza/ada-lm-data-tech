@@ -1,31 +1,22 @@
 def soma(a,b):
-    try:
-        a, b = int(a), int(b)
+    if isinstance(a,(int,float)) and isinstance(a,(int,float)):
         return a + b
-    except ValueError as e:
-        print(f"O input 'a' e 'b' devem ser um int ou float.")
+    raise TypeError(f"O input 'a' e 'b' não devem ser uma string. Recebido {a}, tipo {type(a)}, {b} tipo {type(b)}")
 
 def subtracao(a,b):
-    try:
-        a, b = int(a), int(b)
+    if isinstance(a,(int,float)) and isinstance(a,(int,float)):
         return a - b
-    except ValueError as e:
-        print(f"O input 'a' e 'b' devem ser um int ou float.", e)
+    raise TypeError(f"O input 'a' e 'b' não devem ser uma string. Recebido {a}, tipo {type(a)}, {b} tipo {type(b)}")
 
 def divisao(a,b):
-    try:
-        a, b = int(a), int(b)
+    
+    if isinstance(a,(int,float)) and isinstance(a,(int,float)):
         if b != 0:
             return a / b
-        else:
-            print("Divisão inválida.")
-            return 0
-    except ValueError as e:
-        print(f"O input 'a' e 'b' devem ser um int ou float.", e)
+        raise ZeroDivisionError("A divisão por ZERO é inválida.")
+    raise TypeError(f"O input 'a' e 'b' não devem ser uma string. Recebido {a}, tipo {type(a)}, {b} tipo {type(b)}")
 
 def multiplicacao(a,b):
-    try:
-        a, b = int(a), int(b)
+    if isinstance(a,(int,float)) and isinstance(a,(int,float)):
         return a * b
-    except ValueError as e:
-        print(f"O input 'a' e 'b' devem ser um int ou float.", e)
+    raise TypeError(f"O input 'a' e 'b' não devem ser uma string. Recebido {a}, tipo {type(a)}, {b} tipo {type(b)}")
